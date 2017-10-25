@@ -19299,7 +19299,7 @@ fc= 0.6MHz (X)/ 1.6MHz (Y)</description>
 </deviceset>
 </devicesets>
 </library>
-<library name="misc">
+<library name="miscrel">
 <packages>
 <package name="7X7X4">
 <wire x1="-0.9" y1="-4.3" x2="0.9" y2="-4.3" width="0.2032" layer="51"/>
@@ -19320,14 +19320,14 @@ fc= 0.6MHz (X)/ 1.6MHz (Y)</description>
 <wire x1="3.5" y1="3.5" x2="3.5" y2="-3.5" width="0.2032" layer="21"/>
 <smd name="1" x="0" y="2.325" dx="2.65" dy="7.3" layer="1" rot="R90"/>
 <smd name="2" x="0" y="-2.325" dx="2.65" dy="7.3" layer="1" rot="R90"/>
+<text x="-3.331" y="4.888" size="1.27" layer="25">&gt;NAME</text>
+<text x="-3.5" y="-6.16" size="1.27" layer="27">&gt;VALUE</text>
 <wire x1="0" y1="-3.5" x2="0" y2="3.5" width="0.127" layer="51" curve="-180"/>
 <wire x1="0" y1="3.5" x2="0" y2="-3.5" width="0.127" layer="51" curve="-180"/>
-<text x="-3.81" y="5.08" size="1.27" layer="25">&gt;NAME</text>
-<text x="-3.81" y="-6.35" size="1.27" layer="27">&gt;VALUE</text>
 </package>
 </packages>
 <symbols>
-<symbol name="INDUCTOR">
+<symbol name="POWER_INDUCTOR">
 <text x="-3.81" y="1.778" size="1.778" layer="95">&gt;NAME</text>
 <text x="-3.81" y="-3.556" size="1.778" layer="96">&gt;VALUE</text>
 <rectangle x1="-3.81" y1="-1.27" x2="3.81" y2="1.27" layer="94"/>
@@ -19336,11 +19336,11 @@ fc= 0.6MHz (X)/ 1.6MHz (Y)</description>
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="IND_SMD" prefix="L">
-<description>Shielded power SMD inductor &lt;br&gt;
-7x7x4mm</description>
+<deviceset name="POWER_INDUCTOR" prefix="L">
+<description>SMD power inductor in shielded casing &lt;br&gt;
+7x7x4mm well suited for DC-DC converters</description>
 <gates>
-<gate name="G$1" symbol="INDUCTOR" x="0" y="0"/>
+<gate name="G$1" symbol="POWER_INDUCTOR" x="0" y="0"/>
 </gates>
 <devices>
 <device name="" package="7X7X4">
@@ -19509,7 +19509,7 @@ fc= 0.6MHz (X)/ 1.6MHz (Y)</description>
 <part name="C20" library="rcl" deviceset="C-EU" device="C0805" value="270p"/>
 <part name="C21" library="rcl" deviceset="CPOL-EU" device="SMCD" value="krowka_10/25V"/>
 <part name="R18" library="resistor" deviceset="R-EU_" device="R0805" value="50k"/>
-<part name="L1" library="misc" deviceset="IND_SMD" device=""/>
+<part name="L2" library="miscrel" deviceset="POWER_INDUCTOR" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -20518,7 +20518,7 @@ R1=12k; R2=100k =&gt; Vout=11.48</text>
 <instance part="C20" gate="G$1" x="-142.24" y="-182.88" rot="R90"/>
 <instance part="C21" gate="G$1" x="-190.5" y="-187.96"/>
 <instance part="R18" gate="G$1" x="-182.88" y="-170.18" rot="R180"/>
-<instance part="L1" gate="G$1" x="-162.56" y="-152.4"/>
+<instance part="L2" gate="G$1" x="-162.56" y="-152.4"/>
 </instances>
 <busses>
 <bus name="B$1">
@@ -21520,7 +21520,7 @@ R1=12k; R2=100k =&gt; Vout=11.48</text>
 <wire x1="-187.96" y1="-170.18" x2="-190.5" y2="-170.18" width="0.1524" layer="91"/>
 <junction x="-190.5" y="-170.18"/>
 <wire x1="-190.5" y1="-165.1" x2="-195.58" y2="-165.1" width="0.1524" layer="91"/>
-<pinref part="L1" gate="G$1" pin="1"/>
+<pinref part="L2" gate="G$1" pin="1"/>
 </segment>
 </net>
 <net name="N$17" class="0">
@@ -21532,7 +21532,7 @@ R1=12k; R2=100k =&gt; Vout=11.48</text>
 <pinref part="D5" gate="G$1" pin="A"/>
 <wire x1="-149.86" y1="-167.64" x2="-137.16" y2="-167.64" width="0.1524" layer="91"/>
 <junction x="-149.86" y="-167.64"/>
-<pinref part="L1" gate="G$1" pin="2"/>
+<pinref part="L2" gate="G$1" pin="2"/>
 </segment>
 </net>
 <net name="N$19" class="0">

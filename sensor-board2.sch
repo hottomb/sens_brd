@@ -20354,13 +20354,14 @@ adding voltage divider to MPXHZ6115 and adjusting gain of MPX2010 signal to G=79
 4. added logic converters 3V3&lt;-&gt;5V for MCP3432
 5. doubled capacitors VREGD and VDDIO reduced to single C12 100n</text>
 <text x="55.88" y="-208.28" size="1.778" layer="97">0.1-2V output range</text>
-<text x="-88.9" y="-20.32" size="1.778" layer="91">++ zabezpieczenia przepieciowe</text>
+<text x="-88.9" y="-15.24" size="1.778" layer="91">++ zabezpieczenia przepieciowe i wskaxniki stanu/awarii na ledach</text>
 <text x="-88.9" y="-25.4" size="1.778" layer="91">++ boost -&gt;12V</text>
 <text x="-33.02" y="-307.34" size="1.778" layer="91">zlacze wchodzace 
 na adapter - stad 5V</text>
 <text x="-165.1" y="-144.78" size="1.778" layer="91">R2 = R1 (Vout / 1.23 -1) 
 R1=12k; R2=100k =&gt; Vout=11.48</text>
 <text x="165.1" y="-162.56" size="1.778" layer="91">roladowanie pojemnosci linii???</text>
+<text x="-88.9" y="-20.32" size="1.778" layer="91">++ zabezpieczenia antyprzepieciowe i bezpieczniki?? moze ledy wskazujace awarie</text>
 </plain>
 <instances>
 <instance part="IC1_VDD=7.5V" gate="G$1" x="58.42" y="-172.72"/>
