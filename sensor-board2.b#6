@@ -4651,10 +4651,10 @@ design rules under a new name.</description>
 </signal>
 <signal name="N$21">
 <contactref element="R20" pad="1"/>
-<contactref element="IC9" pad="2"/>
+<contactref element="IC9" pad="1"/>
 <contactref element="R19" pad="2"/>
 <wire x1="37.78" y1="-198.12" x2="35.88" y2="-204.47" width="0" layer="19" extent="1-1"/>
-<wire x1="37.78" y1="-187.79" x2="37.78" y2="-198.12" width="0" layer="19" extent="1-1"/>
+<wire x1="35.88" y1="-187.79" x2="37.78" y2="-198.12" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="3V3_FOR_LORA">
 <contactref element="R20" pad="2"/>
@@ -4808,9 +4808,9 @@ design rules under a new name.</description>
 <signal name="N$34">
 <contactref element="R29" pad="1"/>
 <contactref element="R22" pad="1"/>
-<contactref element="IC9" pad="1"/>
+<contactref element="IC9" pad="2"/>
 <wire x1="25.72" y1="-577.85" x2="25.72" y2="-488.95" width="0" layer="19" extent="1-1"/>
-<wire x1="35.88" y1="-187.79" x2="25.72" y2="-488.95" width="0" layer="19" extent="1-1"/>
+<wire x1="37.78" y1="-187.79" x2="25.72" y2="-488.95" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$32">
 <contactref element="LED4" pad="C"/>
