@@ -29032,6 +29032,7 @@ Siemens, Philips, Valvo&lt;p&gt;
 <part name="R75" library="resistor" deviceset="R-EU_" device="R0805" value="10k"/>
 <part name="R76" library="resistor" deviceset="R-EU_" device="R0805" value="10k"/>
 <part name="C30" library="rcl" deviceset="C-EU" device="C1206" value="1n/50V"/>
+<part name="GND48" library="supply1" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -30281,7 +30282,7 @@ Nie sterowac go!</text>
 <instance part="GND62" gate="1" x="-502.92" y="-256.54"/>
 <instance part="IC14" gate="G$1" x="-391.16" y="-396.24"/>
 <instance part="C27" gate="G$1" x="-375.92" y="-408.94" rot="R180"/>
-<instance part="GND59" gate="1" x="-391.16" y="-434.34"/>
+<instance part="GND59" gate="1" x="-391.16" y="-426.72"/>
 <instance part="FDBK1" gate="G$1" x="-302.26" y="-314.96" rot="R180"/>
 <instance part="D5" gate="G$1" x="-391.16" y="-198.12" rot="MR0"/>
 <instance part="D10" gate="G$1" x="-391.16" y="-139.7" rot="MR0"/>
@@ -30343,7 +30344,7 @@ Nie sterowac go!</text>
 <instance part="GND77" gate="1" x="-375.92" y="-340.36"/>
 <instance part="GND78" gate="1" x="-411.48" y="-340.36"/>
 <instance part="D13" gate="G$1" x="-401.32" y="-325.12" rot="R90"/>
-<instance part="GND79" gate="1" x="-401.32" y="-332.74"/>
+<instance part="GND79" gate="1" x="-401.32" y="-340.36"/>
 <instance part="T1" gate="G$1" x="-444.5" y="-182.88" rot="MR0"/>
 <instance part="R72" gate="G$1" x="-444.5" y="-160.02" rot="R90"/>
 <instance part="R73" gate="G$1" x="-436.88" y="-160.02" rot="R90"/>
@@ -30354,6 +30355,7 @@ Nie sterowac go!</text>
 <instance part="R75" gate="G$1" x="-401.32" y="-314.96" rot="R90"/>
 <instance part="R76" gate="G$1" x="-401.32" y="-408.94" rot="R90"/>
 <instance part="C30" gate="G$1" x="-497.84" y="-162.56" rot="R270"/>
+<instance part="GND48" gate="1" x="-375.92" y="-426.72"/>
 </instances>
 <busses>
 <bus name="B$2">
@@ -30728,13 +30730,8 @@ Nie sterowac go!</text>
 </segment>
 <segment>
 <pinref part="IC14" gate="G$1" pin="GND"/>
-<wire x1="-391.16" y1="-421.64" x2="-391.16" y2="-403.86" width="0.1524" layer="91"/>
-<wire x1="-375.92" y1="-421.64" x2="-391.16" y2="-421.64" width="0.1524" layer="91"/>
-<junction x="-391.16" y="-421.64"/>
+<wire x1="-391.16" y1="-424.18" x2="-391.16" y2="-403.86" width="0.1524" layer="91"/>
 <pinref part="GND59" gate="1" pin="GND"/>
-<wire x1="-391.16" y1="-421.64" x2="-391.16" y2="-431.8" width="0.1524" layer="91"/>
-<pinref part="C27" gate="G$1" pin="1"/>
-<wire x1="-375.92" y1="-411.48" x2="-375.92" y2="-421.64" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="IC16" gate="G$1" pin="A"/>
@@ -30828,7 +30825,7 @@ Nie sterowac go!</text>
 <segment>
 <pinref part="D13" gate="G$1" pin="A"/>
 <pinref part="GND79" gate="1" pin="GND"/>
-<wire x1="-401.32" y1="-330.2" x2="-401.32" y2="-327.66" width="0.1524" layer="91"/>
+<wire x1="-401.32" y1="-337.82" x2="-401.32" y2="-327.66" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="GND77" gate="1" pin="GND"/>
@@ -30844,6 +30841,11 @@ Nie sterowac go!</text>
 <pinref part="D15" gate="G$1" pin="A"/>
 <pinref part="GND80" gate="1" pin="GND"/>
 <wire x1="-543.56" y1="-177.8" x2="-543.56" y2="-180.34" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="C27" gate="G$1" pin="1"/>
+<wire x1="-375.92" y1="-411.48" x2="-375.92" y2="-424.18" width="0.1524" layer="91"/>
+<pinref part="GND48" gate="1" pin="GND"/>
 </segment>
 </net>
 <net name="N$3" class="0">
