@@ -23261,6 +23261,9 @@ NS Package M08A</description>
 <part name="C27" library="rcl" deviceset="C-EU" device="C1206" value="1u/50V"/>
 <part name="C32" library="rcl" deviceset="C-EU" device="C1206" value="1u/50V"/>
 <part name="GND59" library="supply1" deviceset="GND" device=""/>
+<part name="R49" library="resistor" deviceset="R-EU_" device="R0805" value="39k"/>
+<part name="R50" library="resistor" deviceset="R-EU_" device="R0805" value="22k"/>
+<part name="FDBK1" library="resistor" deviceset="R-EU_" device="R0805" value="680k"/>
 </parts>
 <sheets>
 <sheet>
@@ -24113,14 +24116,14 @@ adding voltage divider to MPXHZ6115 and adjusting gain of MPX2010 signal to G=79
 na adapter - stad 5V</text>
 <text x="-88.9" y="-20.32" size="1.778" layer="91">++ zabezpieczenia antyprzepieciowe i bezpieczniki?? moze ledy wskazujace awarie</text>
 <text x="-154.94" y="-320.04" size="1.778" layer="91">Wartosci napiec zabezpieczajacych:
-3.544 @1.278
-3.438 @ typ 1.24
-3.333 @1.202
+3.618 @1.278
+3.500 @ typ 1.24
+3.400 @1.202
 
 przy bledzie dzielnika 
 0.46% (rez. 1%)
-najwyzsze napiecie to 3.560 + 0.02
-najnizsze napiecie to  3.318</text>
+najwyzsze napiecie to 3.618 + 0.0195
+najnizsze napiecie to  3.384</text>
 <text x="45.72" y="-320.04" size="1.27" layer="91">Brak zasilania po stronie ukladu - brak 
 napiecia na IO, ktore mogloby uszkodzic porty 
 (Vin + 0.3V)
@@ -24154,16 +24157,9 @@ enables pump boost mode
 to compensate for eg. termal 
 capacitance elements drop</text>
 <text x="-259.08" y="-50.8" size="1.27" layer="97">sprawdz, czy rzeczywiscie dioda zaporowa dziala</text>
-<text x="-182.88" y="-289.56" size="1.27" layer="97">0.0195V
+<text x="-175.26" y="-289.56" size="1.27" layer="97">additional drop: 0.0195V
 Ir=0.5uA
-worst case</text>
-<text x="-205.74" y="-337.82" size="1.27" layer="97">regulator dostarczy najwyzej 3.366V
-wystepuje wiec obszar zachodzenia
-napiec zasilania i zabezpieczenia
-w najgorszym przypadku, skutkujacy
-wylaczeniem mosfeta wlotowego
-(ograniczenie bedzie mialo charakter oscylujacy i 
-mosfet wlotowy bedzie dzialal w trybie opornika)</text>
+in worst case possile</text>
 </plain>
 <instances>
 <instance part="IC1_VDD=7.5V" gate="G$1" x="58.42" y="-172.72"/>
@@ -24309,8 +24305,8 @@ mosfet wlotowy bedzie dzialal w trybie opornika)</text>
 <instance part="R14" gate="G$1" x="53.34" y="-218.44" rot="R90"/>
 <instance part="GND38" gate="1" x="53.34" y="-226.06"/>
 <instance part="IC9" gate="G$1" x="-198.12" y="-294.64" rot="MR90"/>
-<instance part="R19" gate="G$1" x="-187.96" y="-297.18" rot="R90"/>
-<instance part="R20" gate="G$1" x="-187.96" y="-287.02" rot="R90"/>
+<instance part="R19" gate="G$1" x="-180.34" y="-297.18" rot="R90"/>
+<instance part="R20" gate="G$1" x="-180.34" y="-287.02" rot="R90"/>
 <instance part="Q3" gate="G$1" x="68.58" y="-274.32" rot="MR270"/>
 <instance part="R23" gate="G$1" x="86.36" y="-264.16" rot="R90"/>
 <instance part="Q4" gate="G$1" x="68.58" y="-281.94" rot="MR270"/>
@@ -24379,7 +24375,7 @@ mosfet wlotowy bedzie dzialal w trybie opornika)</text>
 <instance part="GND39" gate="1" x="-218.44" y="-312.42"/>
 <instance part="GND40" gate="1" x="-208.28" y="-312.42"/>
 <instance part="GND41" gate="1" x="-198.12" y="-312.42"/>
-<instance part="GND42" gate="1" x="-187.96" y="-312.42"/>
+<instance part="GND42" gate="1" x="-180.34" y="-312.42"/>
 <instance part="GND43" gate="1" x="-279.4" y="-312.42"/>
 <instance part="IC10" gate="G$1" x="-574.04" y="-152.4"/>
 <instance part="D7" gate="G$1" x="-543.56" y="-149.86"/>
@@ -24436,6 +24432,9 @@ mosfet wlotowy bedzie dzialal w trybie opornika)</text>
 <instance part="C27" gate="G$1" x="-210.82" y="-78.74" rot="R180"/>
 <instance part="C32" gate="G$1" x="-243.84" y="-76.2"/>
 <instance part="GND59" gate="1" x="-226.06" y="-101.6"/>
+<instance part="R49" gate="G$1" x="-149.86" y="-243.84" rot="R90"/>
+<instance part="R50" gate="G$1" x="-149.86" y="-254" rot="R90"/>
+<instance part="FDBK1" gate="G$1" x="-190.5" y="-287.02" rot="R180"/>
 </instances>
 <busses>
 <bus name="B$2">
@@ -24731,7 +24730,7 @@ mosfet wlotowy bedzie dzialal w trybie opornika)</text>
 </segment>
 <segment>
 <pinref part="R19" gate="G$1" pin="1"/>
-<wire x1="-187.96" y1="-302.26" x2="-187.96" y2="-309.88" width="0.1524" layer="91"/>
+<wire x1="-180.34" y1="-302.26" x2="-180.34" y2="-309.88" width="0.1524" layer="91"/>
 <pinref part="GND42" gate="1" pin="GND"/>
 </segment>
 <segment>
@@ -25643,25 +25642,15 @@ mosfet wlotowy bedzie dzialal w trybie opornika)</text>
 <wire x1="-83.82" y1="-259.08" x2="-76.2" y2="-259.08" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$21" class="0">
-<segment>
-<pinref part="R20" gate="G$1" pin="1"/>
-<wire x1="-187.96" y1="-292.1" x2="-193.04" y2="-292.1" width="0.1524" layer="91"/>
-<pinref part="IC9" gate="G$1" pin="R"/>
-<pinref part="R19" gate="G$1" pin="2"/>
-<junction x="-187.96" y="-292.1"/>
-<junction x="-187.96" y="-292.1"/>
-</segment>
-</net>
 <net name="3V3_FOR_LORA" class="0">
 <segment>
-<pinref part="R20" gate="G$1" pin="2"/>
-<wire x1="-187.96" y1="-281.94" x2="-187.96" y2="-271.78" width="0.1524" layer="91"/>
-<wire x1="-187.96" y1="-271.78" x2="-152.4" y2="-271.78" width="0.1524" layer="91"/>
+<wire x1="-220.98" y1="-271.78" x2="-180.34" y2="-271.78" width="0.1524" layer="91"/>
 <pinref part="Q10" gate="G$1" pin="D"/>
-<wire x1="-220.98" y1="-271.78" x2="-187.96" y2="-271.78" width="0.1524" layer="91"/>
-<junction x="-187.96" y="-271.78"/>
 <label x="-152.4" y="-271.78" size="1.27" layer="95" xref="yes"/>
+<pinref part="R20" gate="G$1" pin="2"/>
+<wire x1="-180.34" y1="-271.78" x2="-152.4" y2="-271.78" width="0.1524" layer="91"/>
+<wire x1="-180.34" y1="-281.94" x2="-180.34" y2="-271.78" width="0.1524" layer="91"/>
+<junction x="-180.34" y="-271.78"/>
 </segment>
 </net>
 <net name="V_LOC" class="0">
@@ -25930,6 +25919,9 @@ mosfet wlotowy bedzie dzialal w trybie opornika)</text>
 <pinref part="R21" gate="G$1" pin="2"/>
 <wire x1="-208.28" y1="-289.56" x2="-218.44" y2="-289.56" width="0.1524" layer="91"/>
 <junction x="-218.44" y="-289.56"/>
+<pinref part="FDBK1" gate="G$1" pin="2"/>
+<wire x1="-195.58" y1="-287.02" x2="-218.44" y2="-287.02" width="0.1524" layer="91"/>
+<junction x="-218.44" y="-287.02"/>
 </segment>
 </net>
 <net name="N$27" class="0">
@@ -26259,6 +26251,23 @@ mosfet wlotowy bedzie dzialal w trybie opornika)</text>
 <segment>
 <pinref part="IC14" gate="G$1" pin="EN"/>
 <wire x1="-236.22" y1="-66.04" x2="-241.3" y2="-66.04" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$49" class="0">
+<segment>
+<pinref part="R49" gate="G$1" pin="1"/>
+<pinref part="R50" gate="G$1" pin="2"/>
+</segment>
+</net>
+<net name="N$50" class="0">
+<segment>
+<pinref part="R20" gate="G$1" pin="1"/>
+<pinref part="R19" gate="G$1" pin="2"/>
+<pinref part="IC9" gate="G$1" pin="R"/>
+<wire x1="-193.04" y1="-292.1" x2="-180.34" y2="-292.1" width="0.1524" layer="91"/>
+<junction x="-180.34" y="-292.1"/>
+<pinref part="FDBK1" gate="G$1" pin="1"/>
+<wire x1="-185.42" y1="-287.02" x2="-180.34" y2="-292.1" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
