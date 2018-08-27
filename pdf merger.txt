@@ -1,0 +1,1 @@
+pdftk "C:\Users\Marcin Petela\Desktop\B.pdf" multibackground "C:\Users\Marcin Petela\Desktop\T.pdf" output "C:\Users\Marcin Petela\Desktop\out.pdf"
